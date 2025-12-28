@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #050505;
+    color: #eaeaea;
+    overflow-x: hidden;
+}
+
+/* Cursor */
+#cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,229,255,0.15);
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(18px);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+/* Intro */
+#intro {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #0a0a0a, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: introOut 3.5s forwards;
+}
+
+.intro-text {
+    text-align: center;
+    animation: introIn 2s ease;
+}
+
+.intro-text h1 {
+    font-size: 4rem;
+    color: #00e5ff;
+}
+
+.intro-text p {
+    margin-top: 10px;
+    letter-spacing: 4px;
+    color: #aaa;
+}
+
+/* Progress */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #00e5ff, #00bcd4);
+    z-index: 1000;
+}
+
+/* Layout */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 100px 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+header h1 {
+    font-size: 4rem;
+    background: linear-gradient(90deg, #00e5ff, #00bcd4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    margin-top: 12px;
+    color: #aaa;
+}
+
+/* Cards */
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 25px;
+    padding: 40px;
+    margin-bottom: 50px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skills-list span {
+    padding: 12px 26px;
+    border-radius: 30px;
+    border: 1px solid #222;
+    background: #111;
+    cursor: pointer;
+    transition: 0.35s;
+}
+
+.skills-list span:hover {
+    transform: scale(1.12);
+    color: #00e5ff;
+    border-color: #00e5ff;
+}
+
+.skill-details {
+    margin-top: 30px;
+}
+
+.skill-text {
+    display: none;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+.skill-text .line {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Contact */
+.links a {
+    margin-right: 15px;
+    color: #00e5ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    color: #666;
+}
+
+/* Animations */
+@keyframes introIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes introOut {
+    0%, 70% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
