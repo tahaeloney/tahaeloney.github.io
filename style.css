@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #05000a;
+  color: #eaeaea;
+}
+
+/* Cursor */
+#cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: rgba(180,0,255,0.25);
+  border-radius: 50%;
+  filter: blur(14px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Progress */
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #7b2cff, #c77dff);
+  z-index: 999;
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 90px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+header h1 {
+  font-size: 4rem;
+  color: #b14cff;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 22px;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
+.card h2 {
+  color: #b14cff;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* Skills */
+.skills {
+  overflow: hidden;
+}
+
+.skills-list {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.skills-list button {
+  background: #14001f;
+  border: 1px solid #2a123d;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.skills-list button:hover {
+  transform: scale(1.1);
+  color: #c77dff;
+}
+
+/* CLOSED STATE */
+.skills-content {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease, margin-top 0.4s ease;
+}
+
+/* OPEN STATE */
+.skills:hover .skills-content {
+  max-height: 220px;
+  opacity: 1;
+  margin-top: 25px;
+}
+
+.skill-text {
+  display: none;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.skill-text.active {
+  display: block;
+}
+
+/* Contact */
+.links a {
+  margin-right: 20px;
+  color: #b14cff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-shadow: 0 0 10px #b14cff;
+}
+
+footer {
+  text-align: center;
+  margin-top: 80px;
+  color: #666;
+}
